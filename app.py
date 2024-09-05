@@ -482,11 +482,9 @@ def draw_bounding_rect(use_brect, image, brect):
 bezier_ctrl_points = []
 open_hand = True
 
-# Compute binomial coefficients C for given value of n
 def binomial_coeffs(n):
-    coeffs = [1]  # El primer coeficiente es siempre 1
+    coeffs = [1] 
     for k in range(1, n + 1):
-        # Calculamos el coeficiente binomial C(n, k) usando una relación recursiva
         coeff = coeffs[-1] * (n - k + 1) // k
         coeffs.append(coeff)
     return coeffs
